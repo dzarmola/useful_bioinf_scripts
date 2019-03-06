@@ -30,7 +30,7 @@ def save(savename,page):
         out.write(page)
 
 def make_page(files,save_name="",colnum=COLUMNS):
-    row_num = len(files)/3 + (len(files)/3. > len(files)/3)
+    row_num = len(files)/colnum + (len(files)/gloat(colnum) > len(files)/colnum)
     col_width = 12/colnum
     rows = []
     for row in xrange(row_num):
